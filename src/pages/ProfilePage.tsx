@@ -68,7 +68,7 @@ const ProfilePage = () => {
           Posts
         </h3>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="sm:grid grid-cols-2 gap-4 space-y-4">
           {posts.length === 0 && (
             <p className="text-center text-gray-500">No posts yet.</p>
           )}

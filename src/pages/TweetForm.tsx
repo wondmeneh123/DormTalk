@@ -54,7 +54,7 @@ const PostForm = () => {
   };
 
   return (
-    <div className="bg-[#1a1a1a] border border-gray-700 p-4 rounded-lg shadow mb-4 text-gray-200">
+    <div className="sm:bg-[#1a1a1a] sm:border border-gray-700 sm:p-4 rounded-lg shadow mb-4 text-gray-200">
       <textarea
         ref={textareaRef}
         className="w-full p-3 rounded-lg bg-[#0f0f0f] text-white border border-gray-600 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none"

@@ -11,7 +11,7 @@ const Tweeting = () => {
           <h1 className="text-2xl text-center font-bold text-white tracking-wide">
             🗯️ DormTalk
           </h1>
-          <h1 className="text-2xl text-center font-bold text-white tracking-wide">
+          <h1 className="sm:text-2xl text-center font-bold text-white tracking-wide">
             Hi, {user?.name}
           </h1>
         </div>

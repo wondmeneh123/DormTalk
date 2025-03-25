@@ -26,7 +26,6 @@ type Post = {
 };
 
 const Feed = () => {
-  const { user } = useAuth();
   const [posts, setPosts] = useState<Post[]>([]);
   const [selectedHashtag, setSelectedHashtag] = useState<string | null>(null);
 
@@ -70,7 +69,7 @@ const Feed = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 p-0">
       {selectedHashtag && (
         <div className="mb-4 flex items-center justify-between text-sm text-gray-500">
           <span>
@@ -99,7 +98,7 @@ const Feed = () => {
               />
               <span className="font-semibold hover:underline">{post.name}</span>
             </Link>
-            <span className="font-semibold">{post.name}</span>
+
             <span className="text-sm text-gray-500">
               {post.createdAt?.toDate().toLocaleString()}
             </span>
