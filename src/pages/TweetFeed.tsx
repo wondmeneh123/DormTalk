@@ -7,7 +7,6 @@ import {
   where,
 } from "firebase/firestore";
 import { database } from "../config/firebase";
-import { useAuth } from "../context/AuthContext";
 import { doc, updateDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
