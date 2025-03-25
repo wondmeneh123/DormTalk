@@ -10,9 +10,9 @@ const App = () => {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Register />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/tweet" element={<Tweeting />} />
+          <Route path="/" element={<Tweeting />} />
           <Route path="/profile/:uid" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
