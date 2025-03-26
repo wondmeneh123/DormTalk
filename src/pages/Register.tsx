@@ -3,8 +3,10 @@ import { auth, database } from "../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { AvatarGenerator } from "random-avatar-generator";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +48,7 @@ const Register = () => {
         createdAt: new Date().toISOString(),
       });
 
-      alert("User registered successfully!");
+      navigate("/");
     } catch (error: any) {
       console.error("Registration failed:", error);
       alert(error.message || "Registration error");
@@ -54,24 +56,28 @@ const Register = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h2 className="text-xl font-bold mb-4">Register with Email</h2>
-      <form className="flex flex-col gap-2">
+    <div className="min-h-screen bg-[#0f0f0f] text-gray-200 flex items-center justify-center p-4">
+      <div className="bg-[#1a1a1a]  border-gray-700 p-6  w-full max-w-xl shadow-lg">
+        <h2 className="text-2xl font-bold text-center mb-6 text-white">
+          Register
+        </h2>
+
         <input
           type="text"
           name="name"
           value={formData.name}
           onChange={handleChange}
           placeholder="Full Name"
-          className="border p-2 rounded"
+          autoFocus
+          className="w-full mb-3 px-4 py-2 bg-[#0f0f0f] border border-gray-600 rounded text-sm text-white"
         />
         <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Email Address"
-          className="border p-2 rounded"
+          placeholder="Email"
+          className="w-full mb-3 px-4 py-2 bg-[#0f0f0f] border border-gray-600 rounded text-sm text-white"
         />
         <input
           type="password"
@@ -79,16 +85,16 @@ const Register = () => {
           value={formData.password}
           onChange={handleChange}
           placeholder="Password"
-          className="border p-2 rounded"
+          className="w-full mb-4 px-4 py-2 bg-[#0f0f0f] border border-gray-600 rounded text-sm text-white"
         />
+
         <button
-          type="button"
           onClick={handleRegister}
-          className="bg-blue-600 text-white p-2 rounded"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition"
         >
           Register
         </button>
-      </form>
+      </div>
     </div>
   );
 };
