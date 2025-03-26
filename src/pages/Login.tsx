@@ -7,7 +7,6 @@ import { Link, useNavigate } from "react-router-dom";
 import bg from "../assets/loginBg.png";
 const Login = () => {
   const { setUser } = useAuth();
-  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
