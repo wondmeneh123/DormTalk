@@ -3,7 +3,7 @@ import { auth, database } from "../config/firebase";
 import { useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { useAuth } from "../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import bg from "../assets/loginBg.png";
 const Login = () => {
   const { setUser } = useAuth();
